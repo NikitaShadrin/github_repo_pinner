@@ -18,7 +18,6 @@ export default function Home() {
     setLoading(true);
     try {
       const repos = await searchRepositories(language);
-      const randomRepo = repos[Math.floor(Math.random() * repos.length)];
       setFetchedRepos(repos.slice(0, numToFetch));
     } catch (error) {
       console.error('Error fetching repos:', error);
