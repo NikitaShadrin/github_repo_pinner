@@ -1,5 +1,5 @@
 'use client';
-import { useState, useContext } from 'react';
+import { useState } from 'react';
 import { searchRepositories } from '../lib/github';
 import LanguageSelector from '../components/LanguageSelector';
 import RepositoryCard from '../components/RepositoryCard';
@@ -12,7 +12,7 @@ export default function Home() {
   const [numToFetch, setNumToFetch] = useState(6)
   const [fetchedRepos, setFetchedRepos] = useState<Repository[]>([]);
   const [loading, setLoading] = useState(false);
-  const { pinnedRepos, addPinnedRepo } = usePinnedContext();
+  const { addPinnedRepo } = usePinnedContext();
 
   const handleSearch = async () => {
     setLoading(true);

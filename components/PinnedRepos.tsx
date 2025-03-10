@@ -1,7 +1,6 @@
 'use client';
 
 import { usePinnedContext } from '@/context/PinnedContext';
-import { Repository } from '@/types/repository';
 
 export default function PinnedRepos() {
   const { pinnedRepos, removePinnedRepo, hasMounted } = usePinnedContext();
